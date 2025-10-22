@@ -14,9 +14,9 @@
 - **模型稳定性**: 训练过程收敛稳定，标准差仅0.0028
 
 ## 📁 项目文件结构
-must_2025_ML_midProject/
-├── 📂 src/ # 源代码目录
-│ ├── 📄 mlMid2.ipynb # 项目完整代码
+must_2025_ML_midProject/  
+├── 📂 src/ # 源代码目录  
+│ ├── 📄 mlMid2.ipynb # 项目完整代码  
 │ ├── 📄 mlMid2_colab.ipynb # 项目运行预览
 ├── 📄 best_occlusion_model.pth # 训练过程中最佳模型权重的备份(10MB)
 ├── 📄 final_model_weights.pth # 训练完成后最终模型权重文件 (10MB)
@@ -202,3 +202,4 @@ python scripts/check_submission.py --data_dir ./data --pred pred_private.csv --t
 4. **可复现性**: 所有随机种子已固定，确保结果一致
 
 **祝您使用愉快！如有问题欢迎提交Issue或联系项目维护者。**
+
