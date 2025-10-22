@@ -17,17 +17,17 @@
 must_2025_ML_midProject/  
 ├── 📂 src/ # 源代码目录  
 │ ├── 📄 mlMid2.ipynb # 项目完整代码  
-│ ├── 📄 mlMid2_colab.ipynb # 项目运行预览
-├── 📄 best_occlusion_model.pth # 训练过程中最佳模型权重的备份(10MB)
-├── 📄 final_model_weights.pth # 训练完成后最终模型权重文件 (10MB)
-├── 📄 training_history.json # 训练历史记录 (4KB)
-├── 📄 error_analysis.json # 错误分析报告 (1KB)
-├── 📄 pred_private.csv # 私有测试集预测结果 (110KB) - 最终提交文件
-├── 📄 pred_public.csv # 公开测试集预测结果 (28KB)
-├── 📄 project_summary.md # 项目总结文档 (1KB)
-├── 📄 requirements.txt # 环境依赖
-├── 📄 material.txt # 项目提供的初始文件下载链接
-└── 📄 README.md # 项目说明文档 (本文件)
+│ ├── 📄 mlMid2_colab.ipynb # 项目运行预览  
+├── 📄 best_occlusion_model.pth # 训练过程中最佳模型权重的备份(10MB)  
+├── 📄 final_model_weights.pth # 训练完成后最终模型权重文件 (10MB)  
+├── 📄 training_history.json # 训练历史记录 (4KB)  
+├── 📄 error_analysis.json # 错误分析报告 (1KB)  
+├── 📄 pred_private.csv # 私有测试集预测结果 (110KB) - 最终提交文件  
+├── 📄 pred_public.csv # 公开测试集预测结果 (28KB)  
+├── 📄 project_summary.md # 项目总结文档 (1KB)  
+├── 📄 requirements.txt # 环境依赖  
+├── 📄 material.txt # 项目提供的初始文件下载链接  
+└── 📄 README.md # 项目说明文档 (本文件)  
 
 ## 🛠️ 环境设置
 由于作者电脑AMD GPU的限制，故本项目的开发与测试均在colab上进行
@@ -37,39 +37,41 @@ must_2025_ML_midProject/
 - PyTorch 1.12.0+
 - GPU支持 (推荐，但CPU也可运行)
 
-### 安装依赖
-bash
-使用pip安装所需包
-pip install -r requirements.txt
-### requirements.txt 内容
-torch==1.12.1
-torchvision==0.13.1
-numpy==1.21.6
-pandas==1.3.5
-matplotlib==3.5.3
-scikit-learn==1.0.2
-seaborn==0.11.2
-tqdm==4.64.0
-具体参见mlMid2.ipynb中单元格2的代码，这段代码充分配置了环境
+### 安装依赖  
+bash  
+使用pip安装所需包  
+pip install -r requirements.txt  
+### requirements.txt 内容  
+torch==1.12.1  
+torchvision==0.13.1  
+numpy==1.21.6  
+pandas==1.3.5  
+matplotlib==3.5.3  
+scikit-learn==1.0.2  
+seaborn==0.11.2  
+tqdm==4.64.0  
+具体参见mlMid2.ipynb中单元格2的代码，这段代码充分配置了环境  
 
 ## 🚀 快速开始
 
 ### 1. 数据准备
-下载material.txt中提供的压缩包，解压后得到data以及scripts文件夹，项目需要的初始文件都在这两个文件夹中
+下载material.txt中提供的压缩包，解压后得到data以及scripts文件夹，项目需要的初始文件都在这两个文件夹中  
 复现本项目时，注意修改源代码中对应文件的地址，否则可能报错
 
 ### 2. 模型训练
-bash
-训练新模型
-python src/train.py --data_dir ./data --epochs 80 --batch_size 64
-使用特定配置训练
-python src/train.py --data_dir ./data --learning_rate 0.001 --dropout 0.5
+bash  
+训练新模型  
+python src/train.py --data_dir ./data --epochs 80 --batch_size 64  
+使用特定配置训练  
+python src/train.py --data_dir ./data --learning_rate 0.001 --dropout 0.5  
+
 ### 3. 生成预测
-bash
-使用训练好的模型生成预测
-python src/predict.py --model best_occlusion_model.pth --test_file test_private.npz --output pred_private.csv
-验证预测文件格式
-python scripts/check_submission.py --data_dir ./data --pred pred_private.csv --test_file test_private.npz
+bash  
+使用训练好的模型生成预测  
+python src/predict.py --model best_occlusion_model.pth --test_file test_private.npz --output pred_private.csv  
+验证预测文件格式  
+python scripts/check_submission.py --data_dir ./data --pred pred_private.csv --test_file test_private.npz    
+ 
 ## ⚙️ 训练配置
 
 ### 超参数设置
@@ -202,4 +204,5 @@ python scripts/check_submission.py --data_dir ./data --pred pred_private.csv --t
 4. **可复现性**: 所有随机种子已固定，确保结果一致
 
 **祝您使用愉快！如有问题欢迎提交Issue或联系项目维护者。**
+
 
