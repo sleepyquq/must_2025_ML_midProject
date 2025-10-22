@@ -1,0 +1,23 @@
+# 单元格2：安装和导入必要库
+!pip install torch torchvision numpy pandas matplotlib seaborn scikit-learn
+
+import torch
+import torch.nn as nn
+import torch.optim as optim
+import torchvision.transforms as transforms
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.metrics import accuracy_score, confusion_matrix
+import warnings
+warnings.filterwarnings('ignore')
+
+# 设置随机种子确保可重复性
+torch.manual_seed(42)
+np.random.seed(42)
+
+print("PyTorch版本:", torch.__version__)
+print("GPU可用:", torch.cuda.is_available())
+if torch.cuda.is_available():
+    print("GPU型号:", torch.cuda.get_device_name(0))
