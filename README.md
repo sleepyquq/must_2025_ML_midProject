@@ -99,7 +99,7 @@ python scripts/check_submission.py --data_dir ./data --pred pred_private.csv --t
 | 公开测试集 | 5,000 | 84.51% | 本地验证 |
 
 ### 训练统计
-- **模型大小**: 10.2 MB (最终权重文件)
+- **模型大小**: 10 MB (最终权重文件)
 - **训练时间**: ~45分钟 (在Colab T4 GPU上)
 - **参数量**: 约1.3百万可训练参数
 - **推理速度**: 平均2.3ms/样本 (GPU推理)
@@ -204,5 +204,6 @@ python scripts/check_submission.py --data_dir ./data --pred pred_private.csv --t
 4. **可复现性**: 所有随机种子已固定，确保结果一致
 
 **祝您使用愉快！如有问题欢迎提交Issue或联系项目维护者。**
+
 
 
