@@ -1,0 +1,7 @@
+{
+  "total_errors": 1491,
+  "error_rate": 0.1491,
+  "false_positives": 763,
+  "false_negatives": 728,
+  "avg_occlusion_error": 0.9019910277994498
+}
