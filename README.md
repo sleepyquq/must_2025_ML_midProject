@@ -16,8 +16,9 @@ This project implements a deep learning-based MNIST digit comparison system that
 ## 📁 Project File Structure
 must_2025_ML_midProject/  
 ├── 📂 src/ # Source code directory  
-│   ├── 📄 mlMid2.ipynb # Complete project code  
-│   ├── 📄 mlMid2_colab.ipynb # Project run preview  
+│    ├── 📄 mlMid2.ipynb # Complete project code    
+│    ├── 📄 mlMid2_colab.ipynb # Project run preview   
+│    ├── 📄 mlMid2_en.ipynb # English version   
 ├── 📄 best_occlusion_model.pth # Backup of the best model weights during training (10MB)  
 ├── 📄 final_model_weights.pth # Final model weights file after training (10MB)  
 ├── 📄 training_history.json # Training history record (4KB)  
@@ -204,12 +205,14 @@ This project used AI tools for assistance in the following aspects:
 3. **Environment Consistency**: Ensure the use of the specified versions of dependency packages.
 4. **Reproducibility**: All random seeds are fixed to ensure consistent results.
 
-**Enjoy! If you have any questions, please submit an Issue or contact the project maintainer.**  
+**Enjoy! If you have any questions, please submit an Issue or contact the project maintainer.**
 
----  
+---
+**This project provides an English version on the basis of the Chinese original. In case of any discrepancy between the English version and the Chinese original version, the Chinese original version shall prevail.  
+本项目在中文原版的基础上，提供了英文版本，如果英文版本与中文原版有出入，以中文原版为准。*  
+---
 
 # 中文版
-
 # MNIST Pairwise Comparison Project
 
 ## 📋 项目概述
@@ -228,8 +231,9 @@ This project used AI tools for assistance in the following aspects:
 ## 📁 项目文件结构
 must_2025_ML_midProject/  
 ├── 📂 src/ # 源代码目录  
-│ ├── 📄 mlMid2.ipynb # 项目完整代码  
-│ ├── 📄 mlMid2_colab.ipynb # 项目运行预览  
+│    ├── 📄 mlMid2.ipynb # 项目完整代码    
+│    ├── 📄 mlMid2_colab.ipynb # 项目运行预览    
+│    ├── 📄 mlMid2_en.ipynb # English version    
 ├── 📄 best_occlusion_model.pth # 训练过程中最佳模型权重的备份(10MB)  
 ├── 📄 final_model_weights.pth # 训练完成后最终模型权重文件 (10MB)  
 ├── 📄 training_history.json # 训练历史记录 (4KB)  
@@ -418,6 +422,7 @@ tqdm==4.64.0
 4. **可复现性**: 所有随机种子已固定，确保结果一致
 
 **祝您使用愉快！如有问题欢迎提交Issue或联系项目维护者。**
+
 
 
 
