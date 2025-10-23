@@ -59,18 +59,18 @@ tqdm==4.64.0
 复现本项目时，注意修改源代码中对应文件的地址，否则可能报错
 
 ### 2. 模型训练
-bash  
-训练新模型  
-python src/train.py --data_dir ./data --epochs 80 --batch_size 64  
-使用特定配置训练  
-python src/train.py --data_dir ./data --learning_rate 0.001 --dropout 0.5  
+注意，训练模型前应加载数据，参见单元格3-4  
+对数据进行初步预处理，构建模型，开始训练。  
+上述步骤在前序代码依次执行完毕后，继续按顺序依次执行单元格5-7代码，其中执行单元格7代码后  
+进入主要的模型训练过程，可能需要花费一定的时间，具体取决于硬件  
+作者在项目前期训练出来的模型并不理想，发生了过拟合现象，通过加载数据并抽取一部分样本观察后，判断主要障碍是数据被遮挡，针对这个特点，优化了数据的预处理和模型以及训练函数，具体参见源代码对应部分的注释  
+现在看到的单元格5-7代码是优化后的版本。
 
 ### 3. 生成预测
-bash  
-使用训练好的模型生成预测  
-python src/predict.py --model best_occlusion_model.pth --test_file test_private.npz --output pred_private.csv  
-验证预测文件格式  
-python scripts/check_submission.py --data_dir ./data --pred pred_private.csv --test_file test_private.npz    
+执行单元格11-12代码，将分别生成公开测试集与私有测试集的预测，并且代码段中已经集成了`scripts/check_submission.py`的功能，保证了预测文件格式的正确  
+
+### 4. 其他  
+总而言之，在配置好相应文件地址后，按顺序依次执行整段源代码，即可完整复现整个项目
  
 ## ⚙️ 训练配置
 
@@ -190,7 +190,7 @@ python scripts/check_submission.py --data_dir ./data --pred pred_private.csv --t
 
 ## 📞 联系信息
 
-**项目仓库**: https://github.com/sleepyquq/must_2025_ML_midProject  
+**项目仓库**: https://github.com/sleepyquq/must_fie_2509_ML_midProject  
 **最后更新**: 2025年10月22日  
 **项目状态**: ✅ 已完成并验证通过
 
@@ -204,6 +204,7 @@ python scripts/check_submission.py --data_dir ./data --pred pred_private.csv --t
 4. **可复现性**: 所有随机种子已固定，确保结果一致
 
 **祝您使用愉快！如有问题欢迎提交Issue或联系项目维护者。**
+
 
 
 
